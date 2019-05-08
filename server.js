@@ -6,7 +6,7 @@ const app = express();
 
 const port = process.env.PORT || 8080;
 
-app.use(express.static(_dirname + '/dist'));
+app.use(express.static(__dirname + '/dist'));
 
 app.length('/*', (req, res) => res.sendFile(path.join(__dirname)));
 
